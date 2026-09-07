@@ -2,23 +2,30 @@
   "name": "pinnoco",
   "private": true,
   "version": "0.1.0",
+  "description": "A WebMCP chess strategy board for the OpenAI WebMCP Hackathon.",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "architecture": "node scripts/check-architecture.mjs",
+    "build": "node scripts/sync-stockfish.mjs && tsc -b && vite build",
+    "check": "npm run architecture && npm run test && npm run build",
+    "dev": "node scripts/sync-stockfish.mjs && vite --port 5573",
+    "preview": "node scripts/sync-stockfish.mjs && vite preview --port 5573",
+    "test": "vitest run"
   },
   "dependencies": {
     "chess.js": "^1.4.0",
+    "chessboard-element": "^1.2.0",
     "lucide-react": "^0.468.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "stockfish.js": "^10.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "typescript": "~5.7.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "vitest": "^3.2.6"
   }
 }
