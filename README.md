@@ -6,7 +6,9 @@ Pinnoco is a chess strategy board shared by a player and Codex. The page stays f
 
 Pinnoco is a submission for the OpenAI WebMCP Hackathon. It shows how a web page can give an agent a safe, useful interface for a live activity without putting the conversation inside the page.
 
-**Live site:** [webmcp-khaki.vercel.app](https://webmcp-khaki.vercel.app)
+**Live site:** [chess.oduonye.com](https://chess.oduonye.com)
+
+The Vercel alias [webmcp-khaki.vercel.app](https://webmcp-khaki.vercel.app) points to the same production deployment.
 
 The board is the product. Codex is the coach and opponent. WebMCP connects them through named tools and live resources, so Codex can read the current position, set a practice scenario, wait for a human move, and play its own move. The agent does not need to read the repository or control the page with browser automation.
 
